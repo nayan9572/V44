@@ -135,27 +135,23 @@ This repository intentionally contains **only validated outputs**
 — no heavy code, no hidden logic.
 Copy code
 
-vector-nayan-v44/
-│
-├── data/
-│   ├── vector_nayan_v44_test_results.csv
-│   │   └─ Chapter 1–5 validation (pressure, temperature, diagnostics)
-│   │
-│   ├── vector_nayan_v44_Ch6_Complete.csv
-│   │   └─ Chapter 6 load-induced θ drift + stability index
-│   │
-│   └── Vector_Nayan_V44_Ch6_Only_SafeMode.csv
-│       └─ Safe-mode applied drift & next-cycle prediction
-│
-├── figures/
-│   ├── peak_pressure_vs_rpm.png
-│   ├── peak_temperature_vs_rpm.png
-│   ├── diagnostics_vs_cycle.png
-│   ├── theta_drift_vs_rpm.png
-│   ├── safe_mode_drift.png
-│   └── crank_stability.png
-│
-└── README.md
+
+vector_nayan_v44_test_results.csv
+    └─ Chapter 1–5 validation (pressure, temperature, diagnostics)
+
+vector_nayan_v44_Ch6_Complete.csv
+     └─ Chapter 6 load-induced θ drift + stability index
+   Vector_Nayan_V44_Ch6_Only_SafeMode.csv
+      └─ Safe-mode applied drift & next-cycle prediction
+
+├── figures
+
+peak_pressure_vs_rpm.png
+peak_temperature_vs_rpm.png
+diagnostics_vs_cycle.png
+theta_drift_vs_rpm.png
+safe_mode_drift.png
+crank_stability.png
 ---
 
 ## 📜 Terms & Conditions of Use
