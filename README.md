@@ -130,30 +130,42 @@ This mirrors **real ECU protection logic**.
 
 ---
 
-## 📁 Repository structure (simplified)
-This repository intentionally contains **only validated outputs**  
-— no heavy code, no hidden logic.
-Copy code
+## 📊 Validation Results (Screenshots)
 
+Below plots are **direct screenshots generated from the validated CSV files**  
+(Chapter-1 to Chapter-6).  
+No synthetic data. No post-processing tricks.
 
-vector_nayan_v44_test_results.csv
-    └─ Chapter 1–5 validation (pressure, temperature, diagnostics)
-
-vector_nayan_v44_Ch6_Complete.csv
-     └─ Chapter 6 load-induced θ drift + stability index
-   Vector_Nayan_V44_Ch6_Only_SafeMode.csv
-      └─ Safe-mode applied drift & next-cycle prediction
-
-├── figures
-
-peak_pressure_vs_rpm.png
-peak_temperature_vs_rpm.png
-diagnostics_vs_cycle.png
-theta_drift_vs_rpm.png
-safe_mode_drift.png
-crank_stability.png
 ---
 
+### 🔹 Chapter 3 & 4 — Pressure and Temperature vs RPM
+![Chapter 3 & 4](Screenshot_2026-01-03-05-01-56-134_com.android.chrome.jpg)
+
+- Peak pressure shows bounded RPM-aware behavior  
+- Temperature remains stable across operating range  
+- Confirms physics consistency before diagnostics
+
+---
+
+### 🔹 Chapter 5 & Chapter 6 — Diagnostics & θ Drift
+![Chapter 5 & 6](Screenshot_2026-01-03-05-01-37-431_com.android.chrome.jpg)
+
+- Misfire / early-fire detection is cycle-aware  
+- θ drift decreases naturally with RPM (inertia dominance)  
+- Confirms trend correctness, not curve fitting
+
+---
+
+### 🔹 Chapter 6 — Safe Mode Behavior
+![Chapter 6 Safe Mode](Screenshot_2026-01-03-05-01-28-755_com.android.chrome.jpg)
+
+- Applied drift is filtered and clamped  
+- Faults freeze correction automatically  
+- Crank stability remains >99% across cycles
+
+---
+
+📌 These plots represent **validated behavior**, not visualization demos.
 ## 📜 Terms & Conditions of Use
 
 ✔ Use for early screening  
